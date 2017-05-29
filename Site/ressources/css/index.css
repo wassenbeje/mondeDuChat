@@ -5,3 +5,46 @@
 *   Description:    Feuille de style du header
 */
 
+body{
+    height: 100%;
+    width: 100%;
+    background-color: floralwhite;
+    margin: auto;
+}
+
+section{
+    padding: 5vmin;
+}
+
+.case{
+    width: 400px;
+    height: 500px;
+    background-color: #ede8df;
+    margin: auto;
+    padding: 2vmin;
+    margin-left: 6vmin;
+    box-shadow: 10px 10px 70px -4px rgba(0,0,0,0.59);
+    margin-bottom: 2vmin;
+}
+
+.img{
+    width: 400px;
+    height: 400px;
+    border: 1px solid gray;
+    margin: auto;
+}
+
+.txt{
+    bottom: 0;
+    margin: auto;
+}
+
+.txt a{
+    float: left;
+    margin-top: 20px;
+    color: black;
+}
+
+@media screen and (max-width : 1050px) {
+
+}
