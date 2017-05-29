@@ -1,0 +1,13 @@
+/*
+*   ETML
+*   Auteur :        Jérôme Wassenberg
+*   Date :          29.05.2017
+*   Description:    Feuille de style du header
+*/
+
+header{
+    margin: auto;
+    background-color: #c303d1;
+    width: 100%;
+    height: 100px;
+}
