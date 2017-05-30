@@ -9,6 +9,7 @@ session_start();
 ?>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="../../ressources/css/common.css">
     <link rel="stylesheet" type="text/css" href="../../ressources/css/header.css">
     <link rel="stylesheet" type="text/css" href="../../ressources/css/responsiveMenu.css">
 

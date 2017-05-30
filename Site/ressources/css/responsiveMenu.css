@@ -6,10 +6,7 @@
 */
 
 /*Strip the ul of padding and list styling*/
-ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
+#menu {
     position: absolute;
 }
 
@@ -18,23 +15,23 @@ nav{
 }
 
 /*Create a horizontal list with spacing*/
-li {
+.li {
     display:inline-block;
     float: left;
     margin-right: 1px;
 }
 
 /*Style for menu links*/
-li a {
+.li a {
     font-size: 130%;
     margin-left: 10vmin;
     margin-top: -40px;
-    display:block;
+    display: block;
     min-width:140px;
     height: 50px;
     text-align: center;
     line-height: 50px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -120,7 +117,7 @@ input[type=checkbox]:checked ~ #menu{
     }
     /*Make all menu links full width*/
     #menu li, li a {
-        width: 50%;
+        width: 100%;
     }
     /*Display 'show menu' link*/
     .show-menu {

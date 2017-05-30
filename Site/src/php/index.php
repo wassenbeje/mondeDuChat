@@ -13,23 +13,24 @@ include 'includes/header.php'
     <head>
         <meta charset="UTF-8">
         <title>Accueil</title>
-
-        <link rel="stylesheet" type="text/css" href="../../ressources/css/common.css">
         <link rel="stylesheet" type="text/css" href="../../ressources/css/index.css">
     </head>
 
     <body>
         <section>
 
-            <div class="link">
+            <div id="link">
 
                 <ul>
                     <li>
                         <div class="case">
 
                             <div class="img">
-                                <img src="../../ressources/images/eleves.jpg">
+                                <a href="students.php">
+                                    <img src="../../ressources/images/eleves.jpg">
+                                </a>
                             </div>
+
                             <div class="txt">
                                 <a href="students.php">Liste des élèves</a>
                             </div>
@@ -41,7 +42,9 @@ include 'includes/header.php'
                         <div class="case">
 
                             <div class="img">
-                                <img src="../../ressources/images/enseignants.jpg">
+                                <a href="teachers.php">
+                                    <img src="../../ressources/images/enseignants.jpg">
+                                </a>
                             </div>
                             <div class="txt">
                                 <a href="teachers.php">Liste des enseignants</a>
@@ -54,8 +57,11 @@ include 'includes/header.php'
                         <div class="case">
 
                             <div class="img">
-                                <img src="../../ressources/images/cours.jpg">
+                                <a href="lessons.php">
+                                    <img src="../../ressources/images/cours.jpg">
+                                </a>
                             </div>
+
                             <div class="txt">
                                 <a href="lessons.php">Liste des cours</a>
                             </div>
@@ -63,7 +69,6 @@ include 'includes/header.php'
                         </div>
                     </li>
                 </ul>
-
             </div>
         </section>
     </body>

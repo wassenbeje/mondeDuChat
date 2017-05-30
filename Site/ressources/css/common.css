@@ -5,3 +5,9 @@
 *   Description:    Feuille de style du header
 */
 
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type:none;
+    font-family: Arial, sans-serif;
+}
