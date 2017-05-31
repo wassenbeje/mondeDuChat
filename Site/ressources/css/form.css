@@ -1,0 +1,16 @@
+section{
+    text-align: center;
+    margin: auto;
+    width: 99.9%;
+    height: auto;
+}
+
+#container{
+    margin: auto;
+    width: 70%;
+    min-height: 70%;
+    height: auto !important;
+    bottom: 0;
+    padding: 2%;
+    background-color: #c69cba;
+}

@@ -2,14 +2,14 @@
 /**
  * ETML
  * Auteur: Jérôme Wassenberg
- * Date: 20.03.2017
+ * Date: 30.05.2017
  * Description : Stockage des informations de la BD
  */
 
 #Nom d'utilisateur
-$GLOBALS['config']['user'] = 'dbAdmin';
+$GLOBALS['config']['user'] = 'root';
 #Mot de passe
-$GLOBALS['config']['password'] = 'Gryffondor1616';
+$GLOBALS['config']['password'] = '';
 #Nom de la BD
 $GLOBALS['config']['DBname'] = 'db_mondeduchat';
 #Emplacement de la BD
