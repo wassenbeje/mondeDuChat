@@ -40,7 +40,7 @@ $req = $PDO->exectueQuery($query);
         <title>Elèves</title>
 
         <link rel="stylesheet" type="text/css" href="../../ressources/css/common.css">
-        <link rel="stylesheet" type="text/css" href="../../ressources/css/students.css">
+        <link rel="stylesheet" type="text/css" href="../../ressources/css/students-teachers.css">
         <script src="../js/refresh.js"></script>
     </head>
 
@@ -51,7 +51,7 @@ $req = $PDO->exectueQuery($query);
             <div id="en-tete-list">
                 <h1>Elèves</h1>
                 <label>
-                    <span>Triés par ordre :</span>
+                    <span>Triés par :</span>
                     <select onchange="studentsRefresh()" id="select">
                         <option selected="selected">...</option>
                         <option value="nom">nom</option>

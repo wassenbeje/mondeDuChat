@@ -40,7 +40,7 @@ $req = $PDO->exectueQuery($query);
     <title>Formateurs</title>
 
     <link rel="stylesheet" type="text/css" href="../../ressources/css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../ressources/css/students.css">
+    <link rel="stylesheet" type="text/css" href="../../ressources/css/students-teachers.css">
     <script src="../js/refresh.js"></script>
 </head>
 

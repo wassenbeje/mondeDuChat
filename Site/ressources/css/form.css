@@ -1,5 +1,4 @@
 section{
-    text-align: center;
     margin: auto;
     width: 99.9%;
     height: auto;
@@ -13,4 +12,65 @@ section{
     bottom: 0;
     padding: 2%;
     background-color: #c69cba;
+}
+
+#title{
+    color: white;
+    font-size: 130%;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    padding: 1% 2% 2% 2%;
+    width: 70%;
+    height: 1vmin;
+    background-color: #af8ba4;
+}
+
+#formulaire{
+    margin: auto;
+    padding: 2%;
+    width: 50%;
+    height: 70%;
+    background-color: white;
+    box-shadow: 10px 10px 70px -4px rgba(0,0,0,0.59);
+}
+
+.input{
+    display: block;
+    width: 27vmin;
+    height: 3vmin;
+    margin-bottom: 2vmin;
+}
+
+textarea{
+    width: 100%;
+    height: 20vmin;
+    resize: none;
+}
+
+#file{
+    width: 100%;
+    margin-bottom: 3vmin;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.button{
+    padding: 1vmin;
+    border: 1px solid gray;
+    width: 10vmin;
+    margin-top: 4vmin;
+    margin-left: 22%;
+}
+
+@media screen and (max-width : 1380px) {
+    .input{
+
+    }
 }
