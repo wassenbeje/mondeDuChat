@@ -28,9 +28,10 @@ section{
 
 #formulaire{
     margin: auto;
+    height: auto; !important;
     padding: 2%;
     width: 50%;
-    height: 70%;
+    min-height: 70%;
     background-color: white;
     box-shadow: 10px 10px 70px -4px rgba(0,0,0,0.59);
 }
@@ -50,7 +51,6 @@ textarea{
 
 #file{
     width: 100%;
-    margin-bottom: 3vmin;
 }
 
 .left{
@@ -65,12 +65,56 @@ textarea{
     padding: 1vmin;
     border: 1px solid gray;
     width: 10vmin;
-    margin-top: 4vmin;
-    margin-left: 22%;
+    margin: auto;
 }
 
-@media screen and (max-width : 1380px) {
-    .input{
+#buttons{
+    text-align: center;
+    margin-top: 5%;
+}
 
+@media screen and (max-width : 1455px) {
+
+    #buttons{
+        text-align: center;
+        padding: 5%;
+        height: auto;
+    }
+    .button{
+        margin: auto;
+        font-size: 1.8vmin;
+    }
+
+    .label{
+        float: left !important;
+        width: 100%;
+    }
+
+    .label .input{
+        width: 100% !important;
+        font-size: 1.8vmin;
+    }
+
+    textarea{
+        float: left !important;
+        margin-bottom: 3vmin;
+    }
+
+    #formulaire{
+        height: auto !important;
+        min-height: 0;
+    }
+
+    .titleInput{
+        font-size: 1.8vmin;
+    }
+
+    #title{
+        font-size: 2vmin;
+    }
+
+    #container{
+        min-height: 0;
+        height: auto;!important;
     }
 }

@@ -17,17 +17,17 @@ $PDO = new PDOlink();
 
 if ($sort == "nom")
 {
-    $query = 'SELECT forNom, forPrenom, forPhoto FROM t_formateurs ORDER BY forNom ASC';
+    $query = 'SELECT  idFormateur, forNom, forPrenom, forPhoto FROM t_formateurs ORDER BY forNom ASC';
 }
 
 elseif ($sort == "prenom")
 {
-    $query = 'SELECT forNom, forPrenom, forPhoto FROM t_formateurs ORDER BY forPrenom ASC';
+    $query = 'SELECT idFormateur, forNom, forPrenom, forPhoto FROM t_formateurs ORDER BY forPrenom ASC';
 }
 
 else
 {
-    $query = 'SELECT forNom, forPrenom, forPhoto FROM t_formateurs';
+    $query = 'SELECT idFormateur, forNom, forPrenom, forPhoto FROM t_formateurs';
 }
 
 $req = $PDO->exectueQuery($query);
@@ -50,7 +50,7 @@ $req = $PDO->exectueQuery($query);
     <!--Titre-->
     <div id="en-tete-list">
         <h1>Formateurs</h1>
-        <label>
+        <label class="label">
             <span>Triés par ordre :</span>
             <select onchange="teachersRefresh()" id="select">
                 <option selected="selected">...</option>
@@ -59,7 +59,7 @@ $req = $PDO->exectueQuery($query);
             </select>
         </label>
 
-        <label>
+        <label class="label">
             <button id="addButton" onclick="addTeacher()">Ajouter un enseignant</button>
         </label>
 
@@ -80,13 +80,13 @@ $req = $PDO->exectueQuery($query);
                     <div>
 
                         <div id="photo">
-                            <a href="details.php?id=<?php echo $display['idFormateur']?>">
+                            <a href="details.php?id=<?php echo $display['idFormateur']?>&type=teacher">
                                 <img src="../../ressources/images/formateurs/<?php echo $display['forPhoto']  ?>">
                             </a>
                         </div>
 
                         <div id="infos">
-                            <a id="name" href="details.php?id=<?php echo $display['idFormateur']?>">
+                            <a id="name" href="details.php?id=<?php echo $display['idFormateur']?>&type=teacher">
                                 <p><?php echo $display['forNom']?></p>
                                 <p><?php echo $display['forPrenom']?></p>
                             </a>

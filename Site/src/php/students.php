@@ -50,7 +50,7 @@ $req = $PDO->exectueQuery($query);
             <!--Titre-->
             <div id="en-tete-list">
                 <h1>Elèves</h1>
-                <label>
+                <label class="label">
                     <span>Triés par :</span>
                     <select onchange="studentsRefresh()" id="select">
                         <option selected="selected">...</option>
@@ -59,7 +59,7 @@ $req = $PDO->exectueQuery($query);
                     </select>
                 </label>
 
-                <label>
+                <label class="label">
                     <button id="addButton" onclick="addStudent()">Ajouter un élève</button>
                 </label>
 

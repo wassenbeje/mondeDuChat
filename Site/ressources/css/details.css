@@ -93,4 +93,18 @@ section{
     #titleInfosP2{
         float: none;
     }
+
+    #titleComment{
+        font-size: 2vmin;
+    }
+
+    #list{
+        min-height: 0;
+        height: auto;!important;
+    }
+
+    #case{
+        min-height: 0;
+        height: auto;!important;
+    }
 }

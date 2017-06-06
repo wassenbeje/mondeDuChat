@@ -44,7 +44,7 @@ section{
     border-radius: 5px;
 }
 
-label{
+.label{
     width: 10vmin;
     height:5vmin;
 }

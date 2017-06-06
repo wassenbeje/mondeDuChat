@@ -69,7 +69,7 @@ $req = $PDO->exectueQuery($query);
                             echo '</div>';
 
                             echo '<div id="titleInfosP2">';
-                            echo '<p>Commentaire</p>';
+                            echo '<p id="titleComment">Commentaire</p>';
                             echo '</div>';
 
                             echo '<div id="infosP2">';
@@ -80,10 +80,33 @@ $req = $PDO->exectueQuery($query);
 
                     elseif ($type == 'teacher')
                     {
-                        #Affichage des informations des élèves
+                        #Affichage des informations des formateurs
                         foreach($result as $display)
                         {
-                            echo $display["*"];
+                            echo '<img id="photo" src="../../ressources/images/eleves/'.$display['forPhoto'].'">';
+
+                            echo '<div id="infosP1">';
+                            echo '<ul>';
+                            echo '<li class="infos">Nom : '. $display['forNom'].'</li>';
+                            echo '<li class="infos">Prénom : '. $display['forPrenom'].'</li>';
+                            echo '<li class="infos">Date de naissance : '. $display['forDateNaissance'].'</li>';
+                            echo '<li class="infos">Adresse : '. $display['forRue'].'</li>';
+                            echo '<li class="infos">Numéro postal : '. $display['forNPA'].'</li>';
+                            echo '<li class="infos">Localité : '. $display['forLocalite'].'</li>';
+                            echo '<li class="infos">Pays : '. $display['forPays'].'</li>';
+                            echo '<li class="infos">Téléphone : '. $display['forTelephone'].'</li>';
+                            echo '<li class="infos">Mail : '. $display['forMail'].'</li>';
+                            echo '<li class="infos">Profession : '. $display['forProfession'].'</li>';
+                            echo '</ul>';
+                            echo '</div>';
+
+                            echo '<div id="titleInfosP2">';
+                            echo '<p id="titleComment">Commentaire</p>';
+                            echo '</div>';
+
+                            echo '<div id="infosP2">';
+                            echo '<p class="infos">'.$display['forCommentaire'].'</p>';
+                            echo '</div>';
                         }
                     }
                     ?>
