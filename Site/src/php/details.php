@@ -22,6 +22,11 @@ elseif ($type == 'teacher')
     $query = 'SELECT forNom, forPrenom, forDateNaissance, forRue, forNPA, forLocalite, forPays, forTelephone, forMail, forProfession, forCommentaire, forPhoto FROM t_formateurs WHERE idFormateur=' . $id;
 }
 
+elseif ($type == 'cours')
+{
+    $query = 'SELECT couType, couTitre, couMinEleves, couMaxEleves, couImage FROM t_cours WHERE idcour=' . $id;
+}
+
 $req = $PDO->exectueQuery($query);
 ?>
 
@@ -106,6 +111,39 @@ $req = $PDO->exectueQuery($query);
 
                             echo '<div id="infosP2">';
                             echo '<p class="infos">'.$display['forCommentaire'].'</p>';
+                            echo '</div>';
+                        }
+                    }
+
+                    elseif ($type == 'cours')
+                    {
+                        ?>
+                        <head>
+                            <link rel="stylesheet" type="text/css" href="../../ressources/css/detailsLessons.css">
+                        </head>
+                        <?php
+                        #Affichage des informations des formateurs
+                        foreach($result as $display)
+                        {
+                            echo '<img id="photo" src="../../ressources/images/cours/'.$display['couImage'].'">';
+
+                            echo '<div id="infosP1">';
+                                echo '<ul>';
+
+                                    if ($display['couType'] == 0)
+                                    {
+                                        echo '<li class="infos">Type de cours : tout public</li>';
+                                    }
+
+                                    elseif ($display['couType'] == 1)
+                                    {
+                                        echo '<li class="infos">Type de cours : professionnel</li>';
+                                    }
+                                    echo '<li class="infos">Titre du cours : '. $display['couTitre'].'</li>';
+                                    echo "<li class='infos'>Nombre minimum d'élèves : ". $display['couMinEleves']."</li>";
+                                    echo "<li class='infos'>Nombre maximum d'élèves : ". $display['couMaxEleves']."</li>";
+
+                                echo '</ul>';
                             echo '</div>';
                         }
                     }

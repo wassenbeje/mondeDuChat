@@ -12,6 +12,11 @@ function teachersRefresh() {
     window.location = "teachers.php?sort=" + x;
 }
 
+function lessonsRefresh() {
+    var x = document.getElementById("select").value;
+    window.location = "lessons.php?sort=" + x;
+}
+
 /**
 * Fonctions de redirection pour la page de détails
 **/
@@ -24,3 +29,6 @@ function addStudent() {
     window.location = "addMember.php?type=student";
 }
 
+function addLessons() {
+    window.location = "addLessons.php";
+}

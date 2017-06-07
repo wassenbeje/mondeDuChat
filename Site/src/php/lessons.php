@@ -15,19 +15,19 @@ if (isset($_GET['sort']))
 
 $PDO = new PDOlink();
 
-if ($sort == "nom")
+if ($sort == "type")
 {
-    $query = 'SELECT idEleve, eleNom, elePrenom, elePhoto FROM t_eleves ORDER BY eleNom ASC';
+    $query = 'SELECT idCour, couTitre, couType, couMinEleves, couMaxEleves, couImage FROM t_cours ORDER BY couType ASC';
 }
 
-if ($sort == "prenom")
+elseif ($sort == "title")
 {
-    $query = 'SELECT idEleve, eleNom, elePrenom, elePhoto FROM t_eleves ORDER BY elePrenom ASC';
+    $query = 'SELECT idCour, couTitre, couType, couMinEleves, couMaxEleves, couImage FROM t_cours ORDER BY couTitre ASC';
 }
 
 else
 {
-    $query = 'SELECT idEleve, eleNom, elePrenom, elePhoto FROM t_eleves';
+    $query = 'SELECT idCour, couTitre, couType, couMinEleves, couMaxEleves, couImage FROM t_cours';
 }
 
 $req = $PDO->exectueQuery($query);
@@ -37,10 +37,10 @@ $req = $PDO->exectueQuery($query);
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Elèves</title>
+        <title>Cours</title>
 
         <link rel="stylesheet" type="text/css" href="../../ressources/css/common.css">
-        <link rel="stylesheet" type="text/css" href="../../ressources/css/students-teachers.css">
+        <link rel="stylesheet" type="text/css" href="../../ressources/css/lessons.css">
         <script src="../js/refresh.js"></script>
     </head>
 
@@ -52,18 +52,19 @@ $req = $PDO->exectueQuery($query);
                 <h1>Elèves</h1>
                 <label class="label">
                     <span>Triés par :</span>
-                    <select onchange="studentsRefresh()" id="select">
+                    <select onchange="lessonsRefresh()" id="select">
                         <option selected="selected">...</option>
-                        <option value="nom">nom</option>
-                        <option value="prenom">prénom</option>
+                        <option value="title">Titre</option>
+                        <option value="type">Type</option>
                     </select>
                 </label>
 
                 <label class="label">
-                    <button id="addButton" onclick="addStudent()">Ajouter un élève</button>
+                    <button id="addButton" onclick="addLessons()">Ajouter un cours</button>
                 </label>
 
             </div>
+
             <div id="list">
 
                 <?php
@@ -76,22 +77,36 @@ $req = $PDO->exectueQuery($query);
                     ?>
 
                     <div id="marge">
+
                         <div id="cartes">
+
                             <div>
 
-                                <div id="photo">
-                                    <a href="details.php?id=<?php echo $display['idEleve']?>&type=student">
-                                        <img src="../../ressources/images/eleves/<?php echo $display['elePhoto']  ?>">
+                                <div id="image">
+                                    <a href="details.php?id=<?php echo $display['idCour']?>&type=cours">
+                                        <img src="../../ressources/images/cours/<?php echo $display['couImage']  ?>">
                                     </a>
                                 </div>
 
                                 <div id="infos">
-                                    <a id="name" href="details.php?id=<?php $display['idEleve']?>&type=student">
-                                        <p><?php echo $display['eleNom']?></p>
-                                        <p><?php echo $display['elePrenom']?></p>
+                                    <a id="name" href="details.php?id=<?php $display['idCour']?>&type=cours">
+                                        <p><?php echo $display['couTitre']?></p>
                                     </a>
-                                </div>
 
+                                    <div id="type">
+                                        <?php
+                                            if ($display['couType'] == '0')
+                                            {
+                                                echo '<p>Cours tout public</p>';
+                                            }
+
+                                            elseif ($display['couType'] == '1')
+                                            {
+                                                echo '<p>Cours professionnel</p>';
+                                            }
+                                        ?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
