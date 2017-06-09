@@ -40,15 +40,14 @@ $req = $PDO->exectueQuery($query);
         <title>Elèves</title>
 
         <link rel="stylesheet" type="text/css" href="../../ressources/css/common.css">
-        <link rel="stylesheet" type="text/css" href="../../ressources/css/students-teachers.css">
+        <link rel="stylesheet" type="text/css" href="../../ressources/css/students-teachers-lessons_display.css">
         <script src="../js/refresh.js"></script>
     </head>
 
     <body>
 
         <section>
-            <!--Titre-->
-            <div id="en-tete-list">
+            <div id="title">
                 <h1>Elèves</h1>
                 <label class="label">
                     <span>Triés par :</span>
@@ -64,7 +63,7 @@ $req = $PDO->exectueQuery($query);
                 </label>
 
             </div>
-            <div id="list">
+            <div id="container">
 
                 <?php
                     #Préparation des données
@@ -76,7 +75,7 @@ $req = $PDO->exectueQuery($query);
                         ?>
 
                         <div id="marge">
-                            <div id="cartes">
+                            <div id="cartesStudent-teacher">
                                 <div>
 
                                     <div id="photo">

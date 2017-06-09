@@ -11,3 +11,58 @@
     list-style-type:none;
     font-family: Arial, sans-serif;
 }
+
+section{
+    text-align: center;
+    margin: auto;
+    width: 99.9%;
+    height: auto;
+}
+
+#container{
+    margin: auto;
+    width: 70%;
+    min-height: 70%;
+    height: auto !important;
+    bottom: 0;
+    padding: 2%;
+    background-color: #c69cba;
+}
+
+#titleForm{
+    color: white;
+    font-size: 130%;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    padding: 1% 2% 2% 2%;
+    width: 70%;
+    height: 1vmin;
+    background-color: #af8ba4;
+}
+
+#title{
+    color: white;
+    margin: auto;
+    padding: 1% 2% 2%;
+    height: 5vmin;
+    width: 70%;
+    background-color: #bb93af;
+}
+
+button{
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 1.5vmin;
+}
+
+#case{
+    box-shadow: 10px 10px 70px -4px rgba(0,0,0,0.59);
+    margin: auto;
+    min-height: 70%;
+    height: auto !important;
+    width: 60%;
+    background-color: white;
+    padding: 2%;
+}

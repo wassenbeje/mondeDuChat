@@ -5,105 +5,21 @@
 *   Description:    Feuille de style du header
 */
 
-section{
-    text-align: center;
-    margin: auto;
-    width: 99.9%;
-    height: auto;
-}
-
-#list{
-    margin: auto;
-    width: 70%;
-    min-height: 80%;
-    height: auto !important;
-    bottom: 0;
-    padding: 2%;
-    background-color: #c69cba;
-}
-
-#case{
-    box-shadow: 10px 10px 70px -4px rgba(0,0,0,0.59);
-    margin: auto;
-    min-height: 70%;
-    height: auto !important;
-    width: 60%;
-    background-color: white;
-    padding: 2%;
-}
-
-#photo{
-    width: 100%;
+#image{
     border: 1px solid gray;
-    box-shadow: 10px 10px 70px -4px rgba(0,0,0,0.59);
-    float: left;
+    width: 80%;
+    height: 30vmin;
 }
 
-#infosP1{
-    width: 40%;
-    text-align: left;
+#infos{
     border: 1px solid gray;
-    float: left;
-    margin-left: 2vmin;
-    padding: 1vmin 0 0 1vmin  ;
-}
-
-#titleInfosP2{
-    font-weight: bold;
-    margin-top: 1vmin;
     width: 100%;
-    height: 2vmin;
-    float: left;
-    text-align: left;
-}
-
-#infosP2{
-    padding: 1%;
-    margin-top: 1vmin;
-    text-align: left;
-    width: 98%;
     height: 10%;
-    border: 1px solid gray;
-    float: left;
 }
 
-.infos{
-    font-size: 2vmin;
-    margin-bottom: 2vmin;
+#members{
+
 }
 
-@media screen and (max-width : 1380px) {
-    #photo{
-        margin: auto;
-        float: none;
-    }
-
-    #infosP1{
-        padding: 2%;
-        margin: 1vmin auto;
-        width: 96%;
-        float: none;
-    }
-
-    #infosP2{
-        float: none;
-    }
-
-    #titleInfosP2{
-        float: none;
-    }
-
-    #titleComment{
-        font-size: 2vmin;
-    }
-
-    #list{
-        min-height: 0;
-        height: auto;!important;
-    }
-
-    #case{
-        min-height: 0;
-        height: auto;!important;
-    }
+.title{
 }

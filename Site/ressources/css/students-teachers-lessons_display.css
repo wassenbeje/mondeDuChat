@@ -5,61 +5,30 @@
 *   Description:    Feuille de style de la page de visualisation des élèves
 */
 
-section{
-    text-align: center;
-    margin: auto;
-    width: 99.9%;
-    height: auto;
-}
-
 #marge{
     display: inline-block;
     padding-left: 1.5%;
     padding-right: 1.5%;
 }
 
-#list{
-    margin: auto;
-    width: 70%;
-    min-height: 70%;
-    height: auto !important;
-    bottom: 0;
-    padding: 2%;
-    background-color: #c69cba;
-}
-
-#en-tete-list{
-    color: white;
-    margin: auto;
-    padding: 1% 2% 2%;
-    height: 5vmin;
-    width: 70%;
-    background-color: #bb93af;
-}
-
-#en-tete-list label, select, span{
+label, select, span{
     border: none;
     width: 12vmin;
     height: 3vmin;
     border-radius: 5px;
 }
 
-.label{
-    width: 10vmin;
-    height:5vmin;
-}
-
-#en-tete-list span{
+#title span{
     font-size: 2vmin;
 }
 
-h1{
+#title h1{
     margin: auto;
     font-size: 3vmin;
     width: 30vmin;
 }
 
-#cartes{
+#cartesStudent-teacher{
     margin-top: 3vmin;
     height: 30vmin;
     width: 20vmin;
@@ -68,8 +37,13 @@ h1{
     background-color: #ede8df;
 }
 
-#infos{
-    margin-top: 1vmin;
+#cartesCours{
+    margin-top: 3vmin;
+    height: 40vmin;
+    width: 50vmin;
+    box-shadow: 10px 10px 70px -4px rgba(0,0,0,0.59);
+    padding: 2vmin;
+    background-color: #ede8df;
 }
 
 #name, #name:link, #name:visited, #name:active{
@@ -78,19 +52,36 @@ h1{
     font-size: 2vmin;
 }
 
-#cartes img{
+#infos{
+    margin-top: 1vmin;
+}
+
+#cartesStudent-teacher img{
     border: 1px solid #4a4b4b;
     height: 25vmin;
     width: 20vmin;
 }
 
 #addButton{
-    border: none;
     width: 15vmin;
     height: 3vmin;
-    border-radius: 5px;
-    background-color: white;
-    font-size: 1.5vmin;
+}
+
+#image{
+    width: 50vmin;
+    height: 30vmin;
+    margin-bottom: 1vmin;
+}
+
+#image img{
+    border: 1px solid #4a4b4b;
+    height: 100%;
+    width: 100%;
+}
+
+.label{
+    width: 10vmin;
+    height:5vmin;
 }
 
 @media screen and (max-width : 1050px) {
@@ -98,5 +89,3 @@ h1{
         height: 7vmin;
     }
 }
-
-

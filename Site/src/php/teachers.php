@@ -35,73 +35,79 @@ $req = $PDO->exectueQuery($query);
 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Formateurs</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formateurs</title>
 
-    <link rel="stylesheet" type="text/css" href="../../ressources/css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../ressources/css/students-teachers.css">
-    <script src="../js/refresh.js"></script>
-</head>
+        <link rel="stylesheet" type="text/css" href="../../ressources/css/common.css">
+        <link rel="stylesheet" type="text/css" href="../../ressources/css/students-teachers-lessons_display.css">
+        <script src="../js/refresh.js"></script>
+    </head>
 
-<body>
+    <body>
 
-<section>
-    <!--Titre-->
-    <div id="en-tete-list">
-        <h1>Formateurs</h1>
-        <label class="label">
-            <span>Triés par ordre :</span>
-            <select onchange="teachersRefresh()" id="select">
-                <option selected="selected">...</option>
-                <option value="nom">nom</option>
-                <option value="prenom">prénom</option>
-            </select>
-        </label>
+        <section>
 
-        <label class="label">
-            <button id="addButton" onclick="addTeacher()">Ajouter un enseignant</button>
-        </label>
+            <div id="title">
 
-    </div>
-    <div id="list">
+                <h1>Formateurs</h1>
 
-        <?php
-        #Préparation des données
-        $result = $PDO->prepareData($req);
+                <label class="label">
 
-        #Affichage des informations des élèves
-        foreach($result as $display)
-        {
-            ?>
+                    <span>Triés par ordre :</span>
 
-            <div id="marge">
-                <div id="cartes">
-                    <div>
+                    <select onchange="teachersRefresh()" id="select">
+                        <option selected="selected">...</option>
+                        <option value="nom">nom</option>
+                        <option value="prenom">prénom</option>
+                    </select>
+                </label>
 
-                        <div id="photo">
-                            <a href="details.php?id=<?php echo $display['idFormateur']?>&type=teacher">
-                                <img src="../../ressources/images/formateurs/<?php echo $display['forPhoto']  ?>">
-                            </a>
-                        </div>
+                <label class="label">
+                    <button id="addButton" onclick="addTeacher()">Ajouter un enseignant</button>
+                </label>
 
-                        <div id="infos">
-                            <a id="name" href="details.php?id=<?php echo $display['idFormateur']?>&type=teacher">
-                                <p><?php echo $display['forNom']?></p>
-                                <p><?php echo $display['forPrenom']?></p>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
             </div>
 
-            <?php
-        }
-        ?>
-    </div>
-</section>
-</body>
+            <div id="container">
+
+                <?php
+                #Préparation des données
+                $result = $PDO->prepareData($req);
+
+                #Affichage des informations des élèves
+                foreach($result as $display)
+                {
+                    ?>
+
+                    <div id="marge">
+
+                        <div id="cartesStudent-teacher">
+
+                            <div>
+
+                                <div id="photo">
+                                    <a href="details.php?id=<?php echo $display['idFormateur']?>&type=teacher">
+                                        <img src="../../ressources/images/formateurs/<?php echo $display['forPhoto']  ?>">
+                                    </a>
+                                </div>
+
+                                <div id="infos">
+                                    <a id="name" href="details.php?id=<?php echo $display['idFormateur']?>&type=teacher">
+                                        <p><?php echo $display['forNom']?></p>
+                                        <p><?php echo $display['forPrenom']?></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <?php
+                }
+                ?>
+            </div>
+        </section>
+    </body>
 </html>
 
 <?php

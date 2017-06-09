@@ -15,9 +15,14 @@ if (isset($_GET['sort']))
 
 $PDO = new PDOlink();
 
-if ($sort == "type")
+if ($sort == "typePro")
 {
     $query = 'SELECT idCour, couTitre, couType, couMinEleves, couMaxEleves, couImage FROM t_cours ORDER BY couType ASC';
+}
+
+if ($sort == "typePub")
+{
+    $query = 'SELECT idCour, couTitre, couType, couMinEleves, couMaxEleves, couImage FROM t_cours ORDER BY couType DESC';
 }
 
 elseif ($sort == "title")
@@ -40,7 +45,7 @@ $req = $PDO->exectueQuery($query);
         <title>Cours</title>
 
         <link rel="stylesheet" type="text/css" href="../../ressources/css/common.css">
-        <link rel="stylesheet" type="text/css" href="../../ressources/css/lessons.css">
+        <link rel="stylesheet" type="text/css" href="../../ressources/css/students-teachers-lessons_display.css">
         <script src="../js/refresh.js"></script>
     </head>
 
@@ -48,14 +53,15 @@ $req = $PDO->exectueQuery($query);
 
         <section>
 
-            <div id="en-tete-list">
+            <div id="title">
                 <h1>Elèves</h1>
                 <label class="label">
                     <span>Triés par :</span>
                     <select onchange="lessonsRefresh()" id="select">
                         <option selected="selected">...</option>
                         <option value="title">Titre</option>
-                        <option value="type">Type</option>
+                        <option value="typePro">cours tout pulic</option>
+                        <option value="typePub">cours professionnels</option>
                     </select>
                 </label>
 
@@ -65,7 +71,7 @@ $req = $PDO->exectueQuery($query);
 
             </div>
 
-            <div id="list">
+            <div id="container">
 
                 <?php
                 #Préparation des données
@@ -78,7 +84,7 @@ $req = $PDO->exectueQuery($query);
 
                     <div id="marge">
 
-                        <div id="cartes">
+                        <div id="cartesCours">
 
                             <div>
 

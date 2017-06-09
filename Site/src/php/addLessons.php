@@ -23,7 +23,7 @@ include 'includes/header.php';
 
         <section>
 
-            <div id="title">
+            <div id="titleForm">
                 <p>Ajout d'un cours</p>
             </div>
 

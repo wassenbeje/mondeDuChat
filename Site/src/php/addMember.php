@@ -27,7 +27,7 @@ if (isset($_GET['type']))
 
         <section>
 
-            <div id="title">
+            <div id="titleForm">
                 <?php
                     if ($type == "student")
                     {
