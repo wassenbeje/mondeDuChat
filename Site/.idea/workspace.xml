@@ -2,6 +2,7 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/ressources/css/details.css" line="28" />
+    <bookmark url="file://$PROJECT_DIR$/src/php/functions/checkInsertForm.php" line="38" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75feba29-c31a-492f-b023-f8e44e6d0129" name="Default" comment="" />
@@ -24,32 +25,14 @@
     <favorites_list name="Site" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="detailsLessons.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ressources/css/detailsLessons.css">
+    <leaf>
+      <file leaf-file-name="checkInsertForm.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/php/functions/checkInsertForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="details.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/php/details.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2635659">
-              <caret line="136" column="52" selection-start-line="136" selection-start-column="52" selection-end-line="136" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.303433">
+              <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
               <folding>
-                <element signature="e#1651#7250#0#PHP" expanded="false" />
-                <marker date="1497015914499" expanded="true" signature="293:466" placeholder="SELECT eleNo... t_eleves" />
-                <marker date="1497015914499" expanded="true" signature="522:703" placeholder="SELECT forNo... t_formateurs" />
-                <marker date="1497015914499" expanded="true" signature="757:846" placeholder="SELECT forNo... t_formateurs" />
-                <marker date="1497015914499" expanded="true" signature="876:965" placeholder="SELECT couTy... t_cours" />
-                <marker date="1497015914499" expanded="true" signature="1838:3198" placeholder="..." />
-                <marker date="1497015914499" expanded="true" signature="2051:2106" placeholder="..." />
-                <marker date="1497015914499" expanded="true" signature="4027:4082" placeholder="..." />
-                <marker date="1497015914499" expanded="true" signature="5922:5927" placeholder="..." />
+                <element signature="e#6#127#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,13 +63,9 @@
         <option value="$PROJECT_DIR$/src/php/functions/config.php" />
         <option value="$PROJECT_DIR$/ressources/css/students.css" />
         <option value="$PROJECT_DIR$/ressources/css/checkForm.css" />
-        <option value="$PROJECT_DIR$/src/php/functions/checkInsertForm.php" />
         <option value="$PROJECT_DIR$/src/js/refresh.js" />
-        <option value="$PROJECT_DIR$/ressources/css/form.css" />
         <option value="$PROJECT_DIR$/ressources/css/formLessons.css" />
         <option value="$PROJECT_DIR$/ressources/css/lessons.css" />
-        <option value="$PROJECT_DIR$/src/php/addMember.php" />
-        <option value="$PROJECT_DIR$/src/php/addLessons.php" />
         <option value="$PROJECT_DIR$/ressources/css/students-teachers.css" />
         <option value="$PROJECT_DIR$/src/php/students.php" />
         <option value="$PROJECT_DIR$/src/php/lessons.php" />
@@ -96,6 +75,10 @@
         <option value="$PROJECT_DIR$/ressources/css/details.css" />
         <option value="$PROJECT_DIR$/ressources/css/detailsLessons.css" />
         <option value="$PROJECT_DIR$/src/php/details.php" />
+        <option value="$PROJECT_DIR$/src/php/addLessons.php" />
+        <option value="$PROJECT_DIR$/ressources/css/form.css" />
+        <option value="$PROJECT_DIR$/src/php/addMember.php" />
+        <option value="$PROJECT_DIR$/src/php/functions/checkInsertForm.php" />
       </list>
     </option>
   </component>
@@ -341,7 +324,6 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -354,6 +336,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -370,22 +353,41 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ressources/css/detailsLessons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#1651#7250#0#PHP" expanded="false" />
+            <marker date="1497015914499" expanded="true" signature="293:466" placeholder="SELECT eleNo... t_eleves" />
+            <marker date="1497015914499" expanded="true" signature="522:703" placeholder="SELECT forNo... t_formateurs" />
+            <marker date="1497015914499" expanded="true" signature="757:846" placeholder="SELECT forNo... t_formateurs" />
+            <marker date="1497015914499" expanded="true" signature="876:965" placeholder="SELECT couTy... t_cours" />
+            <marker date="1497015914499" expanded="true" signature="1838:3198" placeholder="..." />
+            <marker date="1497015914499" expanded="true" signature="2051:2106" placeholder="..." />
+            <marker date="1497015914499" expanded="true" signature="4027:4082" placeholder="..." />
+            <marker date="1497015914499" expanded="true" signature="5922:5927" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/php/lessons.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <marker date="1497009043813" expanded="true" signature="319:328" placeholder="SELECT idEle... t_eleves" />
-            <marker date="1497009043813" expanded="true" signature="319:423" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="469:574" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="622:727" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="754:837" placeholder="SELECT idCou... t_cours" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -419,13 +421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <marker date="1497009043813" expanded="true" signature="319:328" placeholder="SELECT idEle... t_eleves" />
-            <marker date="1497009043813" expanded="true" signature="319:423" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="469:574" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="622:727" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="754:837" placeholder="SELECT idCou... t_cours" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -459,13 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-          <folding>
-            <marker date="1497009043813" expanded="true" signature="319:328" placeholder="SELECT idEle... t_eleves" />
-            <marker date="1497009043813" expanded="true" signature="319:423" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="469:574" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="622:727" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="754:837" placeholder="SELECT idCou... t_cours" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -505,13 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1497009043813" expanded="true" signature="319:328" placeholder="SELECT idEle... t_eleves" />
-            <marker date="1497009043813" expanded="true" signature="319:423" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="469:574" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="622:727" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="754:837" placeholder="SELECT idCou... t_cours" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -604,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/functions/checkInsertForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/php/Includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24473976">
@@ -622,23 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38428417">
           <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ressources/css/form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ressources/css/formLessons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09413067">
           <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13178295">
           <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -662,23 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.7253599">
           <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/addMember.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8449612">
-          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/addLessons.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22591361">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16943522">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="99" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,11 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41417497">
           <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
-          <folding>
-            <marker date="1497008998229" expanded="true" signature="316:393" placeholder="SELECT idEle... t_eleves" />
-            <marker date="1497008998229" expanded="true" signature="438:518" placeholder="SELECT idEle... t_eleves" />
-            <marker date="1497008998229" expanded="true" signature="545:602" placeholder="SELECT idEle... t_eleves" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -706,13 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8947951">
           <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-          <folding>
-            <marker date="1497009043813" expanded="true" signature="319:328" placeholder="SELECT idEle... t_eleves" />
-            <marker date="1497009043813" expanded="true" signature="319:423" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="469:574" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="622:727" placeholder="SELECT idCou... t_cours" />
-            <marker date="1497009043813" expanded="true" signature="754:837" placeholder="SELECT idCou... t_cours" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,11 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-44.46154">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <marker date="1497009609273" expanded="true" signature="316:402" placeholder="SELECT idFor... t_formateurs" />
-            <marker date="1497009609273" expanded="true" signature="451:539" placeholder="SELECT idFor... t_formateurs" />
-            <marker date="1497009609273" expanded="true" signature="566:631" placeholder="SELECT idFor... t_formateurs" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -732,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8461537">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,7 +673,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ressources/css/detailsLessons.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding />
         </state>
@@ -762,7 +681,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/php/details.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2635659">
+        <state vertical-scroll-proportion="-7.1923075">
           <caret line="136" column="52" selection-start-line="136" selection-start-column="52" selection-end-line="136" selection-end-column="52" />
           <folding>
             <element signature="e#1651#7250#0#PHP" expanded="false" />
@@ -774,6 +693,48 @@
             <marker date="1497015914499" expanded="true" signature="2051:2106" placeholder="..." />
             <marker date="1497015914499" expanded="true" signature="4027:4082" placeholder="..." />
             <marker date="1497015914499" expanded="true" signature="5922:5927" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ressources/css/toDelete(formLessons).css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.11074197">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/addLessons.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.20487265">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ressources/css/form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77408636">
+          <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/addMember.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.230769">
+          <caret line="83" column="87" selection-start-line="83" selection-start-column="85" selection-end-line="83" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/functions/checkInsertForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.303433">
+          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+          <folding>
+            <element signature="e#6#127#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

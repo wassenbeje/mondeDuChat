@@ -3,7 +3,7 @@
     height: auto; !important;
     padding: 2%;
     width: 50%;
-    min-height: 70%;
+    min-height: 25%;
     background-color: white;
     box-shadow: 10px 10px 70px -4px rgba(0,0,0,0.59);
 }
@@ -25,6 +25,19 @@ textarea{
     width: 100%;
 }
 
+.label{
+    text-align: left;
+}
+
+.label span{
+    width: 100%;
+    font-size: 1.8vmin;
+}
+
+#titleForm p{
+    font-size: 2.3vmin;
+}
+
 .left{
     float: left;
 }
@@ -37,16 +50,11 @@ textarea{
     padding: 1vmin;
     border: 1px solid gray;
     width: 10vmin;
-    margin: auto;
+    margin: 2vmin auto;
 }
 
 #buttons{
     text-align: center;
-    margin-top: 5%;
-}
-
-.titleInput{
-    width: 100%;
 }
 
 @media screen and (max-width : 1455px) {
@@ -83,10 +91,6 @@ textarea{
 
     .titleInput{
         font-size: 1.8vmin;
-    }
-
-    #title{
-        font-size: 2vmin;
     }
 
     #container{

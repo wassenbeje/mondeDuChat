@@ -16,7 +16,7 @@ include 'includes/header.php';
         <title>Ajout d'un cours</title>
 
         <link rel="stylesheet" type="text/css" href="../../ressources/css/common.css">
-        <link rel="stylesheet" type="text/css" href="../../ressources/css/formLessons.css">
+        <link rel="stylesheet" type="text/css" href="../../ressources/css/form.css">
     </head>
 
     <body>
