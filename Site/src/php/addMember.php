@@ -43,7 +43,7 @@ if (isset($_GET['type']))
             <div id="container">
 
                 <div id="formulaire">
-                    <form action="functions/checkInsertForm.php" method="post">
+                    <form action="functions/checkInsertForm.php" method="post" enctype="multipart/form-data">
                         <label class="label left">
                             <span>Nom :</span>
                             <input name="lastname" class="input" type="text" placeholder="...">

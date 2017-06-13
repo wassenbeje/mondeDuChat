@@ -25,11 +25,15 @@ elseif ($type == 'teacher')
 elseif ($type == 'cours')
 {
     $query = 'SELECT couType, couTitre, couMinEleves, couMaxEleves, couImage FROM t_cours WHERE idcour=' . $id;
-    $queryMembers = 'SELECT couType, couTitre, couMinEleves, couMaxEleves, couImage FROM t_cours WHERE idcour=' . $id;
-
+    $queryMembers = 'SELECT idEleve, eleNom, elePrenom, elePhoto FROM t_eleves ORDER BY eleNom ASC';
 }
 
 $req = $PDO->exectueQuery($query);
+if (isset($reqMembers))
+{
+    $reqMembers = $PDO->exectueQuery($queryMembers);
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -86,12 +90,6 @@ $req = $PDO->exectueQuery($query);
                         }
                     }
 
-
-
-
-
-
-
                     elseif ($type == 'teacher')
                     {
                         #Affichage des informations des formateurs
@@ -138,7 +136,7 @@ $req = $PDO->exectueQuery($query);
                         {
                             echo '<img id="image" src="../../ressources/images/cours/'.$display['couImage'].'">';
 
-                            echo '<p class="title">Informations</p>';
+                            echo '<p class="titleInfos">Informations</p>';
 
                             echo '<div id="infos">';
 
@@ -161,31 +159,42 @@ $req = $PDO->exectueQuery($query);
                                 echo '</ul>';
                             echo '</div>';
 
-                            echo '<p class="title">Membres du cours</p>';
+                            echo '<p class="titleInfos">Membres du cours</p>';
 
                             echo '<div id="members">';
 
+                            $result = $PDO->prepareData($reqMembers);
 
+                            foreach($result as $displayMembers)
+                            {
+                                ?>
 
-                                foreach ($result as $displayMembers)
-                                {
+                                <div id="marge">
+                                    <div id="cartesStudent-teacher">
+                                        <div>
 
-                                }
+                                            <div id="photoCarte">
+                                                <a href="details.php?id=<?php echo $displayMembers['idEleve']?>&type=student">
+                                                    <img src="../../ressources/images/eleves/<?php echo $displayMembers['elePhoto']  ?>">
+                                                </a>
+                                            </div>
+
+                                            <div id="infosCarte">
+                                                <a id="name" href="details.php?id=<?php $displayMembers['idEleve']?>&type=student">
+                                                    <p><?php echo $displayMembers['eleNom']?></p>
+                                                    <p><?php echo $displayMembers['elePrenom']?></p>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <?php
+                            }
                             echo '</div>';
                         }
                     }
-
-
-
-
-
-
-
-
-
-
-
-
                     ?>
                 </div>
             </div>

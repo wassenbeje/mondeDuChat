@@ -5,21 +5,69 @@
 *   Description:    Feuille de style du header
 */
 
+/******IMAGE DU COURS******/
 #image{
     border: 1px solid gray;
     width: 80%;
     height: 30vmin;
+    margin-bottom: 1vmin;
 }
 
 #infos{
+    width: 96%;
+    height: 10%;
+    padding: 2%;
+}
+
+#infos li{
+    list-style: circle;
+    margin-bottom: 1vmin;
+    font-size: 1.7vmin;
+}
+
+.infosCours{
+    text-align: left;
+}
+
+#cartesStudent-teacher{
+    margin-top: 3vmin;
+    height: 25vmin;
+    width: 17vmin;
+    box-shadow: 10px 10px 70px -4px rgba(0,0,0,0.59);
+    padding: 2vmin;
+    background-color: #ede8df;
+}
+
+#cartesStudent-teacher img{
+    border: 1px solid #4a4b4b;
+    height: 20vmin;
+    width: 20vmin;
+}
+
+#infosCarte{
+    margin-top: 1vmin;
+}
+
+#name, #name:link, #name:visited, #name:active{
+    color: black;
+    text-decoration: none !important;
+    font-size: 2vmin;
+}
+
+#marge{
+    display: inline-block;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+
+.titleInfos{
+    font-size: 2vmin;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1vmin;
+}
+
+#photoCarte img{
     border: 1px solid gray;
     width: 100%;
-    height: 10%;
-}
-
-#members{
-
-}
-
-.title{
 }

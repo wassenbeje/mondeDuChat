@@ -9,6 +9,8 @@
 include "PDOlink.php";
 $PDO = new PDOlink();
 
+$formOK = true;
+
 #INFOS FORMULAIRE
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
@@ -20,6 +22,8 @@ $country = $_POST['country'];
 $phone = $_POST['phone'];
 $mail = $_POST['mail'];
 $job = $_POST['job'];
+$namePhoto = strtolower(($firstname.$lastname . ".jpg"));
+$description = $_POST['description'];
 
 if (isset($_POST['rentMethod']) && isset($_POST['rentNumber']))
 {
@@ -27,129 +31,67 @@ if (isset($_POST['rentMethod']) && isset($_POST['rentNumber']))
     $rentNumber = $_POST['rentNumber'];
 }
 
-$photo = $_POST['photo'];
-$description = $_POST['description'];
+$pathStudent = "../../../ressources/images/eleves";
+$pathTeacher = "../../../ressources/images/formateurs";
 
 #REGEX
 $regexName = '/^[a-zA-Z \é\è\ö\ô\ê]+$/';
 $regexBirthdate = '/^\d{2}\.\d{2}\.\d{4}$/';
 $regexAddress = '/^[a-z A-Z0-9]+$/';
-$regexNPA = '/^\d+$/';
+$regexNPA = '/^[\d]+$/';
 $regexCityCountry = '/^[a-z A-Z]+$/';
-$regexPhone = '/^\+?\d+{2}$/';
-$regexMail = '/^[a-zA-Z0-9]+\@$/';
+$regexPhone = '/^\+[\d]+$/';
 $regexJob = '/^[a-z A-Z]+$/';
 
-echo "nom : ". $firstname . "<br>";
-echo "Prénom : ".$lastname . "<br>";
-echo "Date de naissance : ".$birthday . "<br>";
-echo "Adresse : ".$address . "<br>";
-echo "Numéro postal : ".$npa . "<br>";
-echo "Ville : ".$city . "<br>";
-echo "Pays : ".$country . "<br>";
-echo "Numéro de téléphone ".$phone . "<br>";
-echo "Mail : ".$mail . "<br>";
-echo "Métier : ".$job . "<br>";
-echo "Description : ".$description . "<br>"."<br>";
-
-if (preg_match($regexName, $firstname))
+if (!(preg_match($regexName, $firstname) && preg_match($regexName, $lastname)))
 {
-    echo " Nom ok";
+    $formOK = false;
 }
 
-else
+if (!preg_match($regexBirthdate, $birthday))
 {
-    echo " Nom faux";
+    $formOK = false;
 }
 
-echo "<br>";
-
-if (preg_match($regexName, $lastname))
+if (!preg_match($regexAddress, $address))
 {
-    echo " Prénom ok";
+    $formOK = false;
 }
 
-else
+if (!preg_match($regexNPA, $npa))
 {
-    echo " Prénom faux";
-}
-echo "<br>";
-if (preg_match($regexBirthdate, $birthday))
-{
-    echo " Date de naissance ok";
+    $formOK = false;
 }
 
-else
+if (!(preg_match($regexCityCountry, $city) && preg_match($regexCityCountry, $country)))
 {
-    echo " Date de naissance fausse";
-}
-echo "<br>";
-if (preg_match($regexAddress, $address))
-{
-    echo " Adresse ok";
+    $formOK = false;
 }
 
-else
+if (!preg_match($regexPhone, $phone))
 {
-    echo " Adresse fausse";
-}
-echo "<br>";
-if (preg_match($regexNPA, $npa))
-{
-    echo " Numéro postal ok";
+    $formOK = false;
 }
 
-else
+if (!preg_match($regexJob, $job))
 {
-    echo " Numéro postal faux";
-}
-echo "<br>";
-if (preg_match($regexCityCountry, $city))
-{
-    echo " Ville ok";
+    $formOK = false;
 }
 
-else
+if ($formOK == true)
 {
-    echo " Ville fausse";
-}
-echo "<br>";
-if (preg_match($regexCityCountry, $country))
-{
-    echo " Pays ok";
+    $query = "INSERT INTO `t_eleves` (`idEleve`, `eleNom`, `elePrenom`, `eleDateNaissance`, `eleRue`, `eleNPA`, `eleLocalite`, `elePays`, `eleTelephone`, `eleMail`, `eleProfession`, `eleCommentaire`, `elePhoto`) VALUES (NULL, '$firstname', '$lastname', '$birthday', '$address', '$npa', '$city', '$country', '$phone', '$mail', '$job', '$description', $namePhoto)";
+    $req = $PDO->exectueQuery($query);
+
+    if (move_uploaded_file($_FILES['photo']['tmp_name'], $pathStudent . $namePhoto))
+    {
+        echo 'Upload effectué avec succès !';
+    }
+
+    else
+    {
+        echo "Echec de l'upload !";
+    }
 }
 
-else
-{
-    echo " Pays faux";
-}
-echo "<br>";
-if (preg_match($regexPhone, $phone))
-{
-    echo " Téléphone ok";
-}
-
-else
-{
-    echo " Téléphone faux";
-}
-echo "<br>";
-if (preg_match($regexMail, $mail))
-{
-    echo " Mail ok";
-}
-
-else
-{
-    echo " Mail faux";
-}
-echo "<br>";
-if (preg_match($regexJob, $job))
-{
-    echo " Métier ok";
-}
-
-else
-{
-    echo " Métier faux";
-}
+$PDO->destroyObject();
