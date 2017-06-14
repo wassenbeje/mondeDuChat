@@ -92,12 +92,12 @@ nav{
 }
 
 /*Hide checkbox*/
-input[type=checkbox]{
+#show-menu[type=checkbox]{
     display: none;
 }
 
 /*Show menu when invisible checkbox is checked*/
-input[type=checkbox]:checked ~ #menu{
+#show-menu[type=checkbox]:checked ~ #menu{
     display: block;
 }
 

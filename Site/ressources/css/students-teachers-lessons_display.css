@@ -30,11 +30,18 @@ label, select, span{
 
 #cartesStudent-teacher{
     margin-top: 3vmin;
-    height: 30vmin;
+    min-height: 30vmin;
+    height: auto;
     width: 20vmin;
     box-shadow: 10px 10px 70px -4px rgba(0,0,0,0.59);
     padding: 2vmin;
     background-color: #ede8df;
+}
+
+#cartesStudent-teacher img{
+    border: 1px solid #4a4b4b;
+    height: 25vmin;
+    width: 20vmin;
 }
 
 #cartesCours{
@@ -56,12 +63,6 @@ label, select, span{
     margin-top: 1vmin;
 }
 
-#cartesStudent-teacher img{
-    border: 1px solid #4a4b4b;
-    height: 25vmin;
-    width: 20vmin;
-}
-
 #addButton{
     width: 15vmin;
     height: 3vmin;
@@ -79,9 +80,26 @@ label, select, span{
     width: 100%;
 }
 
+.sendAndCancelButton{
+    width: 10vmin;
+    height: 4vmin;
+}
+
 .label{
     width: 10vmin;
     height:5vmin;
+}
+
+#checkbox{
+    border-radius: 5px;
+    background-color: #d8abcb;
+    height: 3vmin;
+    padding: 1vmin;
+}
+
+#checkbox input{
+    width: 2vmin;
+    height: 2vmin;
 }
 
 @media screen and (max-width : 1050px) {

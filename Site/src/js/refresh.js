@@ -32,3 +32,7 @@ function addStudent() {
 function addLessons() {
     window.location = "addLessons.php";
 }
+
+function submit() {
+    document.getElementById('form').submit();
+}

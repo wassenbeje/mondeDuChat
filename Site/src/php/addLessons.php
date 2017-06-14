@@ -31,39 +31,50 @@ include 'includes/header.php';
 
                 <div id="formulaire">
 
-                    <form action="functions/checkInsertForm.php" method="post">
+                    <form action="functions/checkInsertLessons.php" method="post" enctype="multipart/form-data">
                         <label class="label left">
                             <span class="titleInput">Titre du cours :</span>
-                            <input class="input" type="text">
+                            <input name="title" class="input" type="text">
                         </label>
 
                         <label class="label right">
                             <span class="titleInput">Type de cours</span>
-                            <select class="input">
-                                <option>Cours tout public</option>
-                                <option>Cours professionnel</option>
+                            <select name="type" class="input">
+                                <option value="0">Cours tout public</option>
+                                <option value="1">Cours professionnel</option>
                             </select>
                         </label>
 
-                        <label class="label right">
+                        <label class="label left">
                             <span class="titleInput">Nombre minimum d'élèves :
-                            <input class="input" type="text">
+                            <input name="min" class="input" type="text">
                         </label>
 
-                        <label class="label left">
+                        <label class="label right">
                             <span class="titleInput">Nombre maximum d'élèves :
-                            <input class="input" type="text">
+                            <input name="max" class="input" type="text">
                         </label>
 
                         <label class="label left" id="file">
                             <span class="titleInput">Photo :</span>
-                            <input class="input" type="file">
+                            <input name="photo" class="input" type="file">
                         </label>
 
                         <div id="buttons">
                             <button class="button" type="reset">Effacer</button>
                             <button class="button" type="submit">Ajouter</button>
                         </div>
+
+                        <?php
+                        if (isset($_GET['error']))
+                        {
+                            $error = $_GET['error'];
+                            if ($error == "yes")
+                            {
+                                echo '<p id="error">Un ou plusieurs champs sont incorrects</p>';
+                            }
+                        }
+                        ?>
 
                     </form>
                 </div>

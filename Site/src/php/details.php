@@ -14,7 +14,7 @@ $PDO = new PDOlink();
 
 if ($type == 'student')
 {
-    $query = 'SELECT eleNom, elePrenom, eleDateNaissance, eleRue, eleNPA, eleLocalite, elePays, eleTelephone, eleMail, eleProfession, eleCommentaire, elePhoto FROM t_eleves WHERE idEleve=' . $id;
+    $query = "SELECT eleNom, elePrenom, eleDateNaissance, eleRue, eleNPA, eleLocalite, elePays, eleTelephone, eleMail, eleProfession, eleCommentaire, elePhoto FROM t_eleves WHERE idEleve=" . $id;
 }
 
 elseif ($type == 'teacher')
@@ -24,15 +24,15 @@ elseif ($type == 'teacher')
 
 elseif ($type == 'cours')
 {
-    $query = 'SELECT couType, couTitre, couMinEleves, couMaxEleves, couImage FROM t_cours WHERE idcour=' . $id;
+    $query = 'SELECT idCour, couType, couTitre, couAnnee, couNombreSessions, couMinEleves, couMaxEleves, couImage FROM t_cours WHERE idcour=' . $id;
     $queryMembers = 'SELECT idEleve, eleNom, elePrenom, elePhoto FROM t_eleves ORDER BY eleNom ASC';
 }
 
 $req = $PDO->exectueQuery($query);
-if (isset($reqMembers))
+
+if (isset($queryMembers))
 {
     $reqMembers = $PDO->exectueQuery($queryMembers);
-
 }
 ?>
 
@@ -46,6 +46,8 @@ if (isset($reqMembers))
         <link rel="stylesheet" type="text/css" href="../../ressources/css/details.css">
         <link rel="stylesheet" type="text/css" href="../../ressources/css/detailsLessons.css">
     </head>
+
+
 
     <body>
 
@@ -95,7 +97,7 @@ if (isset($reqMembers))
                         #Affichage des informations des formateurs
                         foreach($result as $display)
                         {
-                            echo '<img id="photo" src="../../ressources/images/eleves/'.$display['forPhoto'].'">';
+                            echo '<img id="photo" src="../../ressources/images/formateurs/'.$display['forPhoto'].'">';
 
                             echo '<div id="infosP1">';
                                 echo '<ul>';
@@ -120,16 +122,6 @@ if (isset($reqMembers))
                         }
                     }
 
-
-
-
-
-
-
-
-
-
-
                     elseif ($type == 'cours')
                     {
                         foreach($result as $display)
@@ -153,45 +145,63 @@ if (isset($reqMembers))
                                     }
 
                                     echo '<li class="infosCours">Titre du cours : '. $display['couTitre'].'</li>';
+                                    echo "<li class='infosCours'>Nombre de sessions: ". $display['couNombreSessions']."</li>";
+                                    echo "<li class='infosCours'>Année du cours : ". $display['couAnnee']."</li>";
                                     echo "<li class='infosCours'>Nombre minimum d'élèves : ". $display['couMinEleves']."</li>";
                                     echo "<li class='infosCours'>Nombre maximum d'élèves : ". $display['couMaxEleves']."</li>";
 
                                 echo '</ul>';
                             echo '</div>';
 
-                            echo '<p class="titleInfos">Membres du cours</p>';
+                            echo '<p class="titleInfosMembers">Membres du cours</p>';
+
+                            ?>
+                                <script>
+                                    function addMembeer ()
+                                    {
+                                        var x = document.getElementById("addMember").value;
+                                        window.location = "students.php?idCour=" + x;
+                                    }
+                                </script>
+                                <button id="addMember" onclick="addMembeer()" value='<?php echo $display['idCour'] ?>'>Ajouter un participant</button>
+
+                            <?php
 
                             echo '<div id="members">';
 
-                            $result = $PDO->prepareData($reqMembers);
-
-                            foreach($result as $displayMembers)
+                            if (isset($reqMembers))
                             {
-                                ?>
+                                $result = $PDO->prepareData($reqMembers);
 
-                                <div id="marge">
-                                    <div id="cartesStudent-teacher">
-                                        <div>
+                                foreach($result as $displayMembers)
+                                {
+                                    ?>
 
-                                            <div id="photoCarte">
-                                                <a href="details.php?id=<?php echo $displayMembers['idEleve']?>&type=student">
-                                                    <img src="../../ressources/images/eleves/<?php echo $displayMembers['elePhoto']  ?>">
-                                                </a>
+                                    <div id="marge">
+                                        <div id="cartesStudent-teacher">
+                                            <div>
+
+                                                <div id="photoCarte">
+                                                    <a href="details.php?id=<?php echo $displayMembers['idEleve']?>&type=student">
+                                                        <img src="../../ressources/images/eleves/<?php echo $displayMembers['elePhoto']  ?>">
+                                                    </a>
+                                                </div>
+
+                                                <div id="infosCarte">
+                                                    <a id="name" href="details.php?id=<?php $displayMembers['idEleve']?>&type=student">
+                                                        <p><?php echo $displayMembers['eleNom']?></p>
+                                                        <p><?php echo $displayMembers['elePrenom']?></p>
+                                                    </a>
+                                                </div>
+
                                             </div>
-
-                                            <div id="infosCarte">
-                                                <a id="name" href="details.php?id=<?php $displayMembers['idEleve']?>&type=student">
-                                                    <p><?php echo $displayMembers['eleNom']?></p>
-                                                    <p><?php echo $displayMembers['elePrenom']?></p>
-                                                </a>
-                                            </div>
-
                                         </div>
                                     </div>
-                                </div>
 
-                                <?php
+                                    <?php
+                                }
                             }
+
                             echo '</div>';
                         }
                     }

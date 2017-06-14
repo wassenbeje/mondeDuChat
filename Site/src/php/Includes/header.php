@@ -24,7 +24,7 @@ session_start();
     </div>
 
     <nav>
-        <label for="show-menu" class="show-menu">Show Menu</label>
+        <label for="show-menu" class="show-menu">Menu</label>
         <input type="checkbox" id="show-menu" role="button">
         <ul id="menu">
             <li class="li"><a href="index.php">Accueil</a></li>

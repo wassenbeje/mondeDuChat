@@ -67,6 +67,22 @@
     margin-top: 1vmin;
 }
 
+.titleInfosMembers{
+    font-size: 2vmin;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 7vmin;
+}
+
+#addMember{
+    padding: 1vmin;
+    height: 4vmin;
+    width: 17vmin;
+    border: 1px solid #c4c4ca;
+    display: inline;
+    background-color: #e7b7d9;
+}
+
 #photoCarte img{
     border: 1px solid gray;
     width: 100%;
