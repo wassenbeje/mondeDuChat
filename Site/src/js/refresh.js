@@ -29,10 +29,30 @@ function addStudent() {
     window.location = "addMember.php?type=student";
 }
 
+function returnIndex(){
+    window.location = "index.php";
+}
+
 function addLessons() {
     window.location = "addLessons.php";
 }
 
 function submit() {
     document.getElementById('form').submit();
+}
+
+function addMemberToLessons (){
+    window.location = "functions/addMemberToLesson.php";
+}
+
+function addMember ()
+{
+    var x = document.getElementById("addMember").value;
+    window.location = "students.php?idCour=" + x;
+}
+
+function deleteMember ()
+{
+    var x = document.getElementById("addMember").value;
+    window.location = "students.php?idEleve=" + x;
 }

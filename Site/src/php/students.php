@@ -8,9 +8,15 @@
 include 'includes/header.php';
 include "functions/PDOlink.php";
 $sort = "";
+$id = 0;
 if (isset($_GET['sort']))
 {
     $sort = $_GET['sort'];
+}
+
+if (isset($_GET['idCour']))
+{
+    $id = $_GET['idCour'];
 }
 
 $PDO = new PDOlink();
@@ -54,7 +60,7 @@ $req = $PDO->exectueQuery($query);
                     if (isset($_GET['idCour']))
                     {
                         ?>
-                        <button class="sendAndCancelButton" onclick="">Annuler</button>
+                        <button class="sendAndCancelButton" onclick="returnIndex()">Annuler</button>
                         <button class="sendAndCancelButton" onclick="submit()">Envoyer</button>
                         <?php
                     }
@@ -82,54 +88,56 @@ $req = $PDO->exectueQuery($query);
 
             <div id="container">
 
-                <?php
-                    #Préparation des données
-                    $result = $PDO->prepareData($req);
+                <form id="form" action="confirmAddMemberToLesson.php?idCour=<?php echo $id ?>" method="post">
 
-                    #Affichage des informations des élèves
-                    foreach($result as $display)
-                    {
-                        ?>
 
-                        <div id="marge">
-                            <div id="cartesStudent-teacher">
-                                <div>
+                    <?php
+                        #Préparation des données
+                        $result = $PDO->prepareData($req);
 
-                                    <div id="photo">
-                                        <a href="details.php?id=<?php echo $display['idEleve']?>&type=student">
-                                            <img src="../../ressources/images/eleves/<?php echo $display['elePhoto']  ?>">
-                                        </a>
-                                    </div>
+                        #Affichage des informations des élèves
+                        foreach($result as $display)
+                        {
+                            ?>
 
-                                    <div id="infos">
-                                        <a id="name" href="details.php?id=<?php echo $display['idEleve']?>&type=student">
-                                            <p><?php echo $display['eleNom']?></p>
-                                            <p><?php echo $display['elePrenom']?></p>
-                                        </a>
+                            <div id="marge">
+                                <div id="cartesStudent-teacher">
+                                    <div>
 
-                                        <?php
-                                            if (isset($_GET['idCour']))
-                                            {
-                                                ?>
-                                                <form id="form" action="" method="get">
-                                                    <div  id="checkbox">
-                                                        <label>
-                                                            <span>Ajouter :</span>
-                                                            <input type="checkbox">
-                                                            <input style="display:none;" type="submit" value="Submit" id="bt1" />
-                                                        </label>
-                                                    </div>
-                                                </form>
-                                                <?php
-                                            }
-                                        ?>
+                                        <div id="photo">
+                                            <a href="details.php?id=<?php echo $display['idEleve']?>&type=student">
+                                                <img src="../../ressources/images/eleves/<?php echo $display['elePhoto']  ?>">
+                                            </a>
+                                        </div>
+
+                                        <div id="infos">
+                                            <a id="name" href="details.php?id=<?php echo $display['idEleve']?>&type=student">
+                                                <p><?php echo $display['eleNom']?></p>
+                                                <p><?php echo $display['elePrenom']?></p>
+                                            </a>
+
+                                            <?php
+                                                if (isset($_GET['idCour']))
+                                                {
+                                                    ?>
+                                                        <div id="checkbox">
+                                                            <label>
+                                                                <span>Ajouter :</span>
+                                                                <input name="checkbox[]" value="<?php echo $display['idEleve']?>" type="checkbox">
+                                                                <input style="display:none;" type="submit" value="Submit" id="bt1" />
+                                                            </label>
+                                                        </div>
+                                                    <?php
+                                                }
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <?php
-                    }
-                ?>
+                            <?php
+                        }
+                    ?>
+                </form>
             </div>
         </section>
     </body>

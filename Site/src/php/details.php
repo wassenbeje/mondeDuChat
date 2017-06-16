@@ -25,7 +25,7 @@ elseif ($type == 'teacher')
 elseif ($type == 'cours')
 {
     $query = 'SELECT idCour, couType, couTitre, couAnnee, couNombreSessions, couMinEleves, couMaxEleves, couImage FROM t_cours WHERE idcour=' . $id;
-    $queryMembers = 'SELECT idEleve, eleNom, elePrenom, elePhoto FROM t_eleves ORDER BY eleNom ASC';
+    $queryMembers = 'SELECT idEleve, eleNom, elePrenom, elePhoto FROM t_eleves NATURAL JOIN t_inscrire NATURAL JOIN t_cours ORDER BY eleNom ASC';
 }
 
 $req = $PDO->exectueQuery($query);
@@ -45,9 +45,8 @@ if (isset($queryMembers))
         <link rel="stylesheet" type="text/css" href="../../ressources/css/common.css">
         <link rel="stylesheet" type="text/css" href="../../ressources/css/details.css">
         <link rel="stylesheet" type="text/css" href="../../ressources/css/detailsLessons.css">
+        <script src="../js/refresh.js"></script>
     </head>
-
-
 
     <body>
 
@@ -156,14 +155,8 @@ if (isset($queryMembers))
                             echo '<p class="titleInfosMembers">Membres du cours</p>';
 
                             ?>
-                                <script>
-                                    function addMembeer ()
-                                    {
-                                        var x = document.getElementById("addMember").value;
-                                        window.location = "students.php?idCour=" + x;
-                                    }
-                                </script>
-                                <button id="addMember" onclick="addMembeer()" value='<?php echo $display['idCour'] ?>'>Ajouter un participant</button>
+                                <button id="addMember" onclick="deleteMember()" value='<?php echo $display['idCour'] ?>'>Supprimer un participant</button>
+
 
                             <?php
 
@@ -201,7 +194,6 @@ if (isset($queryMembers))
                                     <?php
                                 }
                             }
-
                             echo '</div>';
                         }
                     }
